@@ -75,7 +75,7 @@ public class SettingsActivity extends ATHActionBarActivity
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.primary_color)
                             .preselect(ThemeStore.primaryColor(getActivity()))
-                            .show();
+                            .show((SettingsActivity) getActivity());
                     return true;
                 }
             });
@@ -85,9 +85,9 @@ public class SettingsActivity extends ATHActionBarActivity
             accentColorPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.accent_color)
+                    new ColorChooserDialog.Builder(getActivity(), R.string.accent_color)
                             .preselect(ThemeStore.accentColor(getActivity()))
-                            .show();
+                            .show((SettingsActivity) getActivity());
                     return true;
                 }
             });
@@ -97,9 +97,9 @@ public class SettingsActivity extends ATHActionBarActivity
             textColorPrimaryPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.primary_text_color)
+                    new ColorChooserDialog.Builder(getActivity(), R.string.primary_text_color)
                             .preselect(ThemeStore.textColorPrimary(getActivity()))
-                            .show();
+                            .show((SettingsActivity) getActivity());
                     return true;
                 }
             });
@@ -109,9 +109,9 @@ public class SettingsActivity extends ATHActionBarActivity
             textColorSecondaryPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.secondary_text_color)
+                    new ColorChooserDialog.Builder(getActivity(), R.string.secondary_text_color)
                             .preselect(ThemeStore.textColorSecondary(getActivity()))
-                            .show();
+                            .show((SettingsActivity) getActivity());
                     return true;
                 }
             });

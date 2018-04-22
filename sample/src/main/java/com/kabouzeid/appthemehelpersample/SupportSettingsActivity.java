@@ -70,7 +70,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.primary_color)
                             .preselect(ThemeStore.primaryColor(getActivity()))
-                            .show();
+                            .show(getFragmentManager());
                     return true;
                 }
             });
@@ -82,7 +82,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.accent_color)
                             .preselect(ThemeStore.accentColor(getActivity()))
-                            .show();
+                            .show(getFragmentManager());
                     return true;
                 }
             });
@@ -94,7 +94,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.primary_text_color)
                             .preselect(ThemeStore.textColorPrimary(getActivity()))
-                            .show();
+                            .show(getFragmentManager());
                     return true;
                 }
             });
@@ -106,7 +106,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.secondary_text_color)
                             .preselect(ThemeStore.textColorSecondary(getActivity()))
-                            .show();
+                            .show(getFragmentManager());
                     return true;
                 }
             });
