@@ -34,11 +34,6 @@ public final class ThemeStore implements ThemeStorePrefKeys, ThemeStoreInterface
         mEditor = prefs(context).edit();
     }
 
-    @Override
-    public ThemeStore activityTheme(@StyleRes int theme) {
-        mEditor.putInt(KEY_ACTIVITY_THEME, theme);
-        return this;
-    }
 
     @Override
     public ThemeStore primaryColor(@ColorInt int color) {
@@ -224,12 +219,6 @@ public final class ThemeStore implements ThemeStorePrefKeys, ThemeStoreInterface
 
     public static void markChanged(@NonNull Context context) {
         new ThemeStore(context).commit();
-    }
-
-    @CheckResult
-    @StyleRes
-    public static int activityTheme(@NonNull Context context) {
-        return prefs(context).getInt(KEY_ACTIVITY_THEME, 0);
     }
 
     @CheckResult

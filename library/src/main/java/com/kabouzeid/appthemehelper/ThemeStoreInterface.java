@@ -10,10 +10,6 @@ import android.support.annotation.StyleRes;
  */
 interface ThemeStoreInterface {
 
-    // Activity theme
-
-    ThemeStore activityTheme(@StyleRes int theme);
-
     // Primary colors
 
     ThemeStore primaryColor(@ColorInt int color);

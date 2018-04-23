@@ -115,7 +115,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     ThemeStore.editTheme(getActivity())
-                            .activityTheme(((Boolean) newValue) ? R.style.AppThemeDark : R.style.AppTheme)
+//                            .activityTheme(((Boolean) newValue) ? R.style.AppThemeDark : R.style.AppTheme)
                             .commit();
                     getActivity().recreate();
                     return true;
@@ -195,15 +195,15 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected int getThemeRes() {
-        int defaultThemeRes = super.getThemeRes();
-        switch (defaultThemeRes) {
-            case R.style.AppTheme:
-                return R.style.AppTheme_ActionBar;
-            case R.style.AppThemeDark:
-                return R.style.AppThemeDark_ActionBar;
-        }
-        return defaultThemeRes;
-    }
+//    @Override
+//    protected int getThemeRes() {
+//        int defaultThemeRes = super.getThemeRes();
+//        switch (defaultThemeRes) {
+//            case R.style.AppTheme:
+//                return R.style.AppTheme_ActionBar;
+//            case R.style.AppThemeDark:
+//                return R.style.AppThemeDark_ActionBar;
+//        }
+//        return defaultThemeRes;
+//    }
 }

@@ -8,13 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * @author Aidan Follestad (afollestad), Karim Abou Zeid (kabouzeid)
  */
-public class ATHActivity extends AppCompatActivity {
+public abstract class ATHActivity extends AppCompatActivity {
 
     private long updateTime = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(getThemeRes());
         super.onCreate(savedInstanceState);
         updateTime = System.currentTimeMillis();
     }
@@ -40,10 +39,5 @@ public class ATHActivity extends AppCompatActivity {
                 recreate();
             }
         });
-    }
-
-    @StyleRes
-    protected int getThemeRes() {
-        return ThemeStore.activityTheme(this);
     }
 }

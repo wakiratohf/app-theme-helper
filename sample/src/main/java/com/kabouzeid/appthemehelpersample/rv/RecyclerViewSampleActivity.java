@@ -36,15 +36,15 @@ public class RecyclerViewSampleActivity extends ATHActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected int getThemeRes() {
-        int defaultThemeRes = super.getThemeRes();
-        switch (defaultThemeRes) {
-            case R.style.AppTheme:
-                return R.style.AppTheme_ActionBar;
-            case R.style.AppThemeDark:
-                return R.style.AppThemeDark_ActionBar;
-        }
-        return defaultThemeRes;
-    }
+//    @Override
+//    protected int getThemeRes() {
+//        int defaultThemeRes = super.getThemeRes();
+//        switch (defaultThemeRes) {
+//            case R.style.AppTheme:
+//                return R.style.AppTheme_ActionBar;
+//            case R.style.AppThemeDark:
+//                return R.style.AppThemeDark_ActionBar;
+//        }
+//        return defaultThemeRes;
+//    }
 }

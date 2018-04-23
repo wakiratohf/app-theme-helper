@@ -33,7 +33,7 @@ public class MainActivity extends ATHToolbarActivity implements NavigationView.O
         // Default config
         if (!ThemeStore.isConfigured(this, 2)) {
             ThemeStore.editTheme(this)
-                    .activityTheme(R.style.AppTheme)
+//                    .activityTheme(R.style.AppTheme)
                     .primaryColorRes(R.color.colorPrimaryLightDefault)
                     .accentColorRes(R.color.colorAccentLightDefault)
                     .coloredNavigationBar(false)

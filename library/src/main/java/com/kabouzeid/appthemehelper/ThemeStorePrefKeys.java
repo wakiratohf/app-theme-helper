@@ -10,8 +10,6 @@ interface ThemeStorePrefKeys {
     String IS_CONFIGURED_VERSION_KEY = "is_configured_version";
     String VALUES_CHANGED = "values_changed";
 
-    String KEY_ACTIVITY_THEME = "activity_theme";
-
     String KEY_PRIMARY_COLOR = "primary_color";
     String KEY_PRIMARY_COLOR_DARK = "primary_color_dark";
     String KEY_ACCENT_COLOR = "accent_color";
