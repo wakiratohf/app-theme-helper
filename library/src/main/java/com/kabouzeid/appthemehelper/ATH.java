@@ -55,7 +55,7 @@ public final class ATH {
         }
     }
 
-    public static void setLightNavbarButtons(Activity activity, boolean enabled){
+    public static void setLightNavigationbar(Activity activity, boolean enabled){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             final View decorView = activity.getWindow().getDecorView();
             int systemUiVisibility = decorView.getSystemUiVisibility();
@@ -68,6 +68,10 @@ public final class ATH {
         }
     }
 
+    public static void setLightNavigationbarAuto(Activity activity, int bgColor) {
+        setLightNavigationbar(activity, ColorUtil.isColorLight(bgColor));
+    }
+
     public static void setNavigationbarColorAuto(Activity activity) {
         setNavigationbarColor(activity, ThemeStore.navigationBarColor(activity));
     }
@@ -75,13 +79,7 @@ public final class ATH {
     public static void setNavigationbarColor(Activity activity, int color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             activity.getWindow().setNavigationBarColor(color);
-            setNavigationbarButtonColor(activity, ColorUtil.isColorLight(color));
-        }
-    }
-
-    public static void setNavigationbarButtonColor(Activity activity, boolean enableLightTheme){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            setLightNavbarButtons(activity, enableLightTheme);
+            setLightNavigationbarAuto(activity, color);
         }
     }
 

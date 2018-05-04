@@ -74,6 +74,7 @@ public class MainActivity extends ATHToolbarActivity implements NavigationView.O
         }
         mDrawer.setStatusBarBackgroundColor(statusBarColor);
         ATH.setLightStatusbarAuto(this, statusBarColor);
+        ATH.setNavigationbarColorAuto(this);
 
         MaterialDialogsUtil.updateMaterialDialogsThemeSingleton(this);
     }

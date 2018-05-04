@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 
+import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
 
 /**
@@ -17,6 +18,8 @@ public class MiscActivity extends ATHToolbarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_misc);
+        ATH.setNavigationbarColorAuto(this);
+        ATH.setStatusbarColorAuto(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_back);

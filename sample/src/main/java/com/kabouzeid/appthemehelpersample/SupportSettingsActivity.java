@@ -168,6 +168,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ATH.setActivityToolbarColorAuto(this, getATHToolbar());
         ATH.setStatusbarColorAuto(this);
+        ATH.setNavigationbarColorAuto(this);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, new SettingsFragment()).commit();
