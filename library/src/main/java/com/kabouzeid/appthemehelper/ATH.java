@@ -15,6 +15,9 @@ import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.TintHelper;
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 
+import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
@@ -52,6 +55,19 @@ public final class ATH {
         }
     }
 
+    public static void setLightNavbarButtons(Activity activity, boolean enabled){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            final View decorView = activity.getWindow().getDecorView();
+            int systemUiVisibility = decorView.getSystemUiVisibility();
+            if(enabled){
+                systemUiVisibility |= SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+            } else {
+                systemUiVisibility &= ~SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+            }
+            decorView.setSystemUiVisibility(systemUiVisibility);
+        }
+    }
+
     public static void setNavigationbarColorAuto(Activity activity) {
         setNavigationbarColor(activity, ThemeStore.navigationBarColor(activity));
     }
@@ -59,6 +75,13 @@ public final class ATH {
     public static void setNavigationbarColor(Activity activity, int color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             activity.getWindow().setNavigationBarColor(color);
+            setNavigationbarButtonColor(activity, ColorUtil.isColorLight(color));
+        }
+    }
+
+    public static void setNavigationbarButtonColor(Activity activity, boolean enableLightTheme){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            setLightNavbarButtons(activity, enableLightTheme);
         }
     }
 
