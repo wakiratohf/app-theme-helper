@@ -5,8 +5,9 @@ import android.content.Context;
 import android.os.Build;
 import android.preference.Preference;
 import android.preference.SwitchPreference;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.SwitchCompat;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SwitchCompat;
+
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,7 +75,7 @@ public class ATESwitchPreference extends SwitchPreference {
     protected void onBindView(View view) {
         super.onBindView(view);
         if (COMPAT_MODE) {
-            mSwitch = (ATESwitch) view.findViewById(R.id.switchWidget);
+            mSwitch = view.findViewById(R.id.switchWidget);
             mSwitch.setChecked(isChecked());
         } else {
             View parentSwitch = findSwitchView(view);

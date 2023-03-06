@@ -4,9 +4,9 @@ package com.kabouzeid.appthemehelpersample;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.v7.preference.Preference;
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.preference.Preference;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -70,7 +70,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.primary_color)
                             .preselect(ThemeStore.primaryColor(getActivity()))
-                            .show(getFragmentManager());
+                            .show();
                     return true;
                 }
             });
@@ -82,7 +82,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.accent_color)
                             .preselect(ThemeStore.accentColor(getActivity()))
-                            .show(getFragmentManager());
+                            .show();
                     return true;
                 }
             });
@@ -94,7 +94,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.primary_text_color)
                             .preselect(ThemeStore.textColorPrimary(getActivity()))
-                            .show(getFragmentManager());
+                            .show();
                     return true;
                 }
             });
@@ -106,7 +106,7 @@ public class SupportSettingsActivity extends ATHActionBarActivity implements Col
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SupportSettingsActivity) getActivity(), R.string.secondary_text_color)
                             .preselect(ThemeStore.textColorSecondary(getActivity()))
-                            .show(getFragmentManager());
+                            .show();
                     return true;
                 }
             });

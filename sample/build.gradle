@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 31
 
     lintOptions {
         abortOnError false
@@ -10,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.kabouzeid.appthemehelpersample"
         minSdkVersion 14
-        targetSdkVersion 27
+        targetSdkVersion 31
         versionCode 4
         versionName "1.0"
     }
@@ -25,11 +24,11 @@ android {
 dependencies {
     implementation project(path: ':library')
 
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:preference-v7:27.1.1'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.preference:preference:1.0.0'
 
-    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
-    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    implementation 'com.github.wakiratohf.material-dialogs:commons:0.9.6.1-SNAPSHOT'
+    implementation 'com.github.wakiratohf.material-dialogs:core:0.9.6.1-SNAPSHOT'
 }

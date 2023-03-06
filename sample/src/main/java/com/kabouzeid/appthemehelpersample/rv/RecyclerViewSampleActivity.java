@@ -1,9 +1,10 @@
 package com.kabouzeid.appthemehelpersample.rv;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.kabouzeid.appthemehelper.common.ATHActionBarActivity;
 import com.kabouzeid.appthemehelpersample.R;

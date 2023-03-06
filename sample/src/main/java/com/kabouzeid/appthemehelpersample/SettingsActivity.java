@@ -6,8 +6,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -75,7 +77,7 @@ public class SettingsActivity extends ATHActionBarActivity
                 public boolean onPreferenceClick(Preference preference) {
                     new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.primary_color)
                             .preselect(ThemeStore.primaryColor(getActivity()))
-                            .show((SettingsActivity) getActivity());
+                            .show();
                     return true;
                 }
             });
@@ -85,9 +87,9 @@ public class SettingsActivity extends ATHActionBarActivity
             accentColorPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    new ColorChooserDialog.Builder(getActivity(), R.string.accent_color)
+                    new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.accent_color)
                             .preselect(ThemeStore.accentColor(getActivity()))
-                            .show((SettingsActivity) getActivity());
+                            .show();
                     return true;
                 }
             });
@@ -97,23 +99,20 @@ public class SettingsActivity extends ATHActionBarActivity
             textColorPrimaryPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    new ColorChooserDialog.Builder(getActivity(), R.string.primary_text_color)
+                    new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.primary_text_color)
                             .preselect(ThemeStore.textColorPrimary(getActivity()))
-                            .show((SettingsActivity) getActivity());
+                            .show();
                     return true;
                 }
             });
 
             ATEColorPreference textColorSecondaryPref = (ATEColorPreference) findPreference("text_secondary");
             textColorSecondaryPref.setColor(ThemeStore.textColorSecondary(getActivity()), Color.BLACK);
-            textColorSecondaryPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-                    new ColorChooserDialog.Builder(getActivity(), R.string.secondary_text_color)
-                            .preselect(ThemeStore.textColorSecondary(getActivity()))
-                            .show((SettingsActivity) getActivity());
-                    return true;
-                }
+            textColorSecondaryPref.setOnPreferenceClickListener(preference -> {
+                new ColorChooserDialog.Builder((SettingsActivity) getActivity(), R.string.secondary_text_color)
+                        .preselect(ThemeStore.textColorSecondary(getActivity()))
+                        .show();
+                return true;
             });
 
             findPreference("dark_theme").setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {

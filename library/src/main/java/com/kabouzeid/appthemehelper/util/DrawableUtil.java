@@ -3,7 +3,7 @@ package com.kabouzeid.appthemehelper.util;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
-import android.support.annotation.ColorInt;
+import androidx.annotation.ColorInt;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)

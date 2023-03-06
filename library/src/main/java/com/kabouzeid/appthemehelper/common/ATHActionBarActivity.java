@@ -1,6 +1,6 @@
 package com.kabouzeid.appthemehelper.common;
 
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 

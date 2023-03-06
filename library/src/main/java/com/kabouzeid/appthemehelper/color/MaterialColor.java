@@ -1,8 +1,8 @@
 package com.kabouzeid.appthemehelper.color;
 
 import android.graphics.Color;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
 
 import com.kabouzeid.appthemehelper.R;
 

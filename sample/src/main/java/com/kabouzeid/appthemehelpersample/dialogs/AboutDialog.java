@@ -2,9 +2,10 @@ package com.kabouzeid.appthemehelpersample.dialogs;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+
 import android.text.Html;
 
 import com.afollestad.materialdialogs.MaterialDialog;

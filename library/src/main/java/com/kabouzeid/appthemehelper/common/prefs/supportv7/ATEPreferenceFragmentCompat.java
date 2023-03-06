@@ -1,9 +1,9 @@
 package com.kabouzeid.appthemehelper.common.prefs.supportv7;
 
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceFragmentCompat;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 
 import com.kabouzeid.appthemehelper.common.prefs.supportv7.dialogs.ATEEditTextPreferenceDialogFragmentCompat;
 import com.kabouzeid.appthemehelper.common.prefs.supportv7.dialogs.ATEListPreferenceDialogFragmentCompat;

@@ -2,8 +2,8 @@ package com.kabouzeid.appthemehelper;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.StyleRes;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author Aidan Follestad (afollestad), Karim Abou Zeid (kabouzeid)

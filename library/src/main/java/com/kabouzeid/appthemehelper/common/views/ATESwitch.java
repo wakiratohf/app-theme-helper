@@ -1,9 +1,10 @@
 package com.kabouzeid.appthemehelper.common.views;
 
 import android.content.Context;
-import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.appcompat.widget.SwitchCompat;
 
 import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.ThemeStore;
